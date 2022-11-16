@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+mycart
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>items in my cart</h3>
+            <table>
+                <thead>
+                <tr>
+                <th>sno</th>
+                <th>product</th>
+                <th>rate</th>
+                <th>quantity</th>
+                <th>subtotal</th>
+                <th>action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for cp in cart.cartproduct_set.all %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{cp.product.title}}</td>
+                    <td>{{cp.rate}}</td>
+                    <td>{{cp.quantity}}</td>
+                    <td>{{cp.subtotal}}</td>
+<!--                   -->
+
+
+                </tr>
+                {% endfor %}
+                <tr>
+                    <th>total</th>
+                    <th>{{cart.total}}</th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

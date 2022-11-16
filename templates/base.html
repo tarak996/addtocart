@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<a href="{% url 'home' %}">home</a>
+<a href="{%  url 'about' %}">About us</a>
+<a href="{%url 'contact' %}">contact</a>
+<a href="{%url 'mycart' %}">cart</a>
+{% block content %}
+{% endblock %}
+
+
+</h1>
+</body>
+</html>
