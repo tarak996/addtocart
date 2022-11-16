@@ -6,14 +6,14 @@ welcome
 <div class="container">
 <h1>welcome {{myname}}</h1>
 <div class="row">
-{% for i in product_list %}
+<!-- {% for i in product_list %}
 <div class="col-md-4">
 {{i.title}}
 <img src="{{i.image.url}}" width="200px">
     <p>Price:<strike>Rs.{{i.marked_price}}</strike>Rs. {{i.selling_price}}</p>
 <a href="{% url 'addtocart' i.id %}" class="btn btn-primary">Add To Cart</a>
 </div>
-{% endfor %}
+{% endfor %} -->
     </div>
     </div>
 {% endblock %}
