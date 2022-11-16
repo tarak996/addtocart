@@ -1,1 +1,0 @@
-web gunicon add_to_cart.wsgi:application --log-file -
